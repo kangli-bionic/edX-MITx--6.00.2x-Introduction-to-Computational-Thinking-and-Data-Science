@@ -14,6 +14,8 @@ Our goal in this lecture is to study how computation can help us understand our 
 	b. determine values of unknown 
 	c. predict consequences
 
+---
+
 Let's see how this might work in practice.
 
 Assume that we designed an experiment to test Hook’s law for springs ( F= - KX )
@@ -85,8 +87,62 @@ def plotData(fileName):
 plotData('springData.txt')
 pylab.show()
 ```
-Here's the results:
+Here are the results:
 
 ![](./img/figure_1.png)
 
+But we expected all the measured points to fall on a line with slope 1/k.
+
+So, there was clearly some errors that crept in.
+
+Let's see how that might affect our experiment. We want to model errors as random numbers.
+
+---
+
+Basically, the errors will lie in the range between +1 and -1. The idea is that the errors are much more likely to be small than they are to be large and close to one.
+
+Let's run a little experiment.
+
+##### 1. First thing we're going to do is to draw 100 numbers from that probability distribution.
+
+##### 2. Then we're going to sum them up.
+
+each one of those numbers that we draw will represent a small error from some random source.
+And it's really the cumulative effect of all those errors that we'll want to do. So we're going to sum them.
+
+obviously the smallest value we should get should be -100. And at the other extreme, we might get something as big as +100 as the sum.
+
+We're actually going to see what the distribution looks like.
+
+##### 3. Having done that particular sum, we'll save it away in a histogram and repeat 10,000 times.
+
+So we're going to build a histogram of what all the sums look like.
+
+Let's write a little program and see what the results look like.
+
+```python
+def testErrors(ntrials=10000,npts=100):
+    results = [0] * ntrials
+    for i in xrange(ntrials):
+        s = 0   # sum of random points
+        for j in xrange(npts):
+            s += random.triangular(-1,1)
+        results[i] =s
+    # plot results in a histogram
+    pylab.hist(results,bins=50)
+    pylab.title('Sum of 100 random points -- Triangular PDF (10,000 trials)')
+    pylab.xlabel('Sum')
+    pylab.ylabel('Number of trials')
+
+##testErrors()
+##pylab.show()
+
+```
+What testErrors does is, for the number of trials that we've asked for, in this case the default value for trials is 10,000, it will go off and
+select a certain number of points, in this case 100, from a particular probability distribution, in this case a triangular distribution that goes
+between -1 and 1.
+
+And here are the results:
+
+![](./img/figure_2.png)
 

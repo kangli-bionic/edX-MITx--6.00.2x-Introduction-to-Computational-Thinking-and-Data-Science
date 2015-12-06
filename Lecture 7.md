@@ -2,7 +2,7 @@
 
 Our goal in this lecture is to study how computation can help us understand our experimental data and process it to help reveal the underlying truths.
 
-#### A common pattern in Science and Engineering
+### A common pattern in Science and Engineering
 
 1. develop a hypothesis
 
@@ -153,7 +153,7 @@ distribution that we choose.
 
 We chose a triangular distribution, but we could have chosen a uniform distribution, or a Gaussian distribution, or, in fact, any distribution that has a finite mean and variance.
 
-#### The Normal Distribution
+## The Normal Distribution
 
 ![](./img/figure_3.png)
 
@@ -166,3 +166,12 @@ The distribution is completely characterized by two parameters:
 With those two factors in hand, we can actually write a little equation that describes the PDF, the Probability Density Function, for a normal distribution.
 
 ![](./img/figure_4.png)
+
+There's some special names we apply. If mu is equal to 0 and the variance is equal to 1, we call that the unit normal or maybe the **standard normal distribution**.
+
+From the equasion, you can see If the argument x gets bigger, the probability associated with that becomes exponentially smaller.
+
+So when our observation errors are due to the accumulation of many small random processes perturbing the measurements ever so slightly, we can say something about the likelihood that the error will be of a certain size.
+
+It tells us that large errors are basically much less likely, I mean, exponentially less likely,
+than small errors.

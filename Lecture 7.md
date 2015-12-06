@@ -146,3 +146,23 @@ And here are the results:
 
 ![](./img/figure_2.png)
 
+The result is that the probability of all of our sum of the errors converges on the normal distribution as the number of trials in our experiment increases.
+
+Another observation that comes to us courtesy of the central limit theorem. And that basically tell us that we get the same result no matter what error
+distribution that we choose.
+
+We chose a triangular distribution, but we could have chosen a uniform distribution, or a Gaussian distribution, or, in fact, any distribution that has a finite mean and variance.
+
+#### The Normal Distribution
+
+![](./img/figure_3.png)
+
+The distribution is completely characterized by two parameters:
+
+- One of the parameters is the mean. And that's the central axis of the distribution, in this case, we're plotting normal distributions with a mean of 0.
+
+- The other measurement is the variance, which is a measure of the width of the curve.
+
+With those two factors in hand, we can actually write a little equation that describes the PDF, the Probability Density Function, for a normal distribution.
+
+![](./img/figure_4.png)

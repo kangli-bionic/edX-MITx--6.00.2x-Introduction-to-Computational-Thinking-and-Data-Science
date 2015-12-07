@@ -175,3 +175,48 @@ So when our observation errors are due to the accumulation of many small random 
 
 It tells us that large errors are basically much less likely, I mean, exponentially less likely,
 than small errors.
+
+---
+
+If obs represents observation and pred represents prediction (obs-pred) will be the error, and L(obs-pred) will be the liklihuud of that error occurs.
+
+Because we know that the liklihood of smaller errors is larger.
+
+So if I'm going to go off and look at the likelihood of each observation, and then multiply all those together.
+
+We want to choose the parameters of the prediction.
+So in this case, it would be the constant 1 over k, That's the slope of the line such that it maximizes the likelihood.
+
+![](./img/figure_5.png)
+
+So we want to maximize the product of the likelihoods of the errors. That will actually be the same as minimizing 1 over the product. We know that whatever parameters will minimize the 1 over the product will also minimize the log of that expression.
+
+So let's take the natural log, natural log Ln.
+
+![](./img/figure_6.png)
+
+Taking out all the constants, we will end up with  a magic result in the business of processing data points. This is what's called the Sum of the Square of the Errors (SSE or **least squares**).
+
+![](./img/figure_7.png)
+
+If we choose parameters such that we minimize the sum of the square of the observed errors, then that will be the most likely predictor for the observations that we have.
+
+---
+
+Finding the values of the parameters for the prediction that minimize the sum of the square of the errors is a very common thing to want to do to
+data points. And pylab has a built-in procedure that will do that for us. It's called polyfit.
+
+```python
+# find a, b that minimize sum((yvals-(a*xvals+b))**2)
+a, b = pylab.polyfit(xvals, yvals, 1)
+```
+
+For second degree aquations:
+
+```python
+# find a, b, c that minimize sum((yvals-(a*xvals**2 + b*xvals + c))**2)
+a, b, c = pylab.polyfit(xvals, yvlas, 2)
+```
+
+
+

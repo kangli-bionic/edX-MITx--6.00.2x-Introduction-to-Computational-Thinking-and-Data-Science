@@ -1,4 +1,4 @@
-# Lecture 7 - Curve Fitting
+# Lecture 7 - Part 1: Errors In Experinemtal Data
 
 Our goal in this lecture is to study how computation can help us understand our experimental data and process it to help reveal the underlying truths.
 

@@ -1,3 +1,5 @@
+# Lecture 7 - Part 3: Goodness of Fit
+
 ## Another Experiment
 
 Let's assume that fire an arrow at a target. When we release the arrow, it will fly to the target. Suppose we've taken a bunch of measurements. 

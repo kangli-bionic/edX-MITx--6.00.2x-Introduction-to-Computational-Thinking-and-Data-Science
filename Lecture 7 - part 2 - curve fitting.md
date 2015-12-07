@@ -1,5 +1,7 @@
-**let's use polyfit to find the line that best fits our data.
-**
+# Lecture 7 - Part 2: Curve Fitting
+
+let's use polyfit to find the line that best fits our data.
+
 ```python
 import pylab, random
 

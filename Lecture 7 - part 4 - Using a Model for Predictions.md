@@ -1,4 +1,4 @@
-# Lecture 7 - Part 3: Using a Model for Prediction
+# Lecture 7 - Part 4: Using a Model for Prediction
 
 Suppose someone came to you, as an expert, now, in the trajectory of
 arrows, and said, how thick a shield would I need in order to protect

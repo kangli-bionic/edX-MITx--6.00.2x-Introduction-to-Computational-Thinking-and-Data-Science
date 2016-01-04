@@ -43,6 +43,6 @@ We would like to modify this code so it can't crash the entire program, and so i
     
 First, we aren't always sure that the file defined by PATH_TO_FILE always exists, and we don't want our program to crash if it is missing. This is called [defensive programming](http://en.wikipedia.org/wiki/Defensive_programming "defensive programming").
 
-![](./ps1_01.png)
+![](./img/ps1_01.png)
 
-![](./ps1_02.png)
+![](./img/ps1_02.png)

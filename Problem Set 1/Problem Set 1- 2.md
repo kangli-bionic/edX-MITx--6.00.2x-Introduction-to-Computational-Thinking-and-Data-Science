@@ -13,10 +13,10 @@ If you see an error such as:
         import ps1_pkgtest
       File "ps1_pkgtest.py", line 2, in <module>
     ImportError: No module named numpy
+    and/or
 
-and/or
+Traceback (most recent call last):
 
-    Traceback (most recent call last):
       File "C:/Users/winedx9/Desktop/run_pkgtest.py", line 1, in <module>
         import ps1_pkgtest
       File "ps1_pkgtest.py", line 3, in <module>
@@ -28,5 +28,5 @@ then you do not have the required packages installed. Read on for more support.
 
 - If you **did not** install Enthought, you can attempt to install the correct packages on your own. Note that the 6.00.2x staff will not be able to help you install these packages. If you have trouble, we strongly recommend you simply install Canopy. That said, here are the packages you need to have. Choose which set of instructions to follow based on which OS and version of Python you are running. You only need the one of each library that matches your setup!
 
-![](./ps1_03.png)
+![](./img/ps1_03.png)
 
